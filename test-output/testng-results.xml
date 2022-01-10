@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44" started-at="2022-01-07T18:02:59 EST" finished-at="2022-01-07T18:02:59 EST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44" started-at="2022-01-07T18:02:59 EST" finished-at="2022-01-07T18:02:59 EST">
+      <class name="stepdefinitions.TS_001_Create_JRI_Account">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:stepdefinitions.TS_001_Create_JRI_Account@2fd66ad3]" name="beforeClass" is-config="true" duration-ms="6" started-at="2022-01-07T18:02:59 EST" finished-at="2022-01-07T18:02:59 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:stepdefinitions.TS_001_Create_JRI_Account@2fd66ad3]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2022-01-07T18:02:59 EST" finished-at="2022-01-07T18:02:59 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f()[pri:0, instance:stepdefinitions.TS_001_Create_JRI_Account@2fd66ad3]" name="f" duration-ms="5" started-at="2022-01-07T18:02:59 EST" finished-at="2022-01-07T18:02:59 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- stepdefinitions.TS_001_Create_JRI_Account -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
