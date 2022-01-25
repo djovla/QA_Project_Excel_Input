@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.math.BigDecimal;
+import java.nio.charset.Charset;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -17,6 +19,8 @@ import java.util.Random;
 import java.util.ArrayList;
 
 import java.util.Set;
+
+import javax.swing.JOptionPane;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -137,11 +141,12 @@ public class GenericWrappers extends BaseClass {
 		fi = null;
 		try {
 			fi = new FileInputStream(file);
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 		try {
-			prop.load(fi);
+			prop.load(new InputStreamReader(fi, Charset.forName("UTF-8")));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -237,7 +242,11 @@ public class GenericWrappers extends BaseClass {
 	/***
 	 * select value Randomly using the option the method use the index
 	 ************/
-
+   public void enterTextCaptcha(By locator) {
+	   String str = JOptionPane.showInputDialog("Enter Captcha");
+	   sendKeyByAnyLocator(locator, str);  
+   }
+   
 	public void selectOptionRandomly(By locator) {
 		Select se = new Select(driver.findElement(locator));
 		int number = se.getOptions().size();

@@ -57,6 +57,7 @@ public class TS_002_Loging_And_Logout_To_JRI_Application extends GenericWrappers
 		headCelValue =getCellNumberByValue(Integer.parseInt(getData("TTITLE_DATA_HEAD_ROW")),getData("TITLE_PASS"));
 		sendKeyByAnyLocatorNumeric(loc.SingInPage_Password_Input,headCelValue,Integer.parseInt(getData("VALID_DATA_ROW")));
 		Thread.sleep(10000);
+		enterTextCaptcha(loc.SingInPage_Captcha_Input);
 		clickByAnylocator(loc.SingInPage_SecureSignIn_Button);
 		//clickByAnylocator(loc.CreateNewAccountPage_terms_CheckBox);
 		System.out.println("The Name Enter in the fielad :"+nameUsed);
@@ -85,6 +86,7 @@ public class TS_002_Loging_And_Logout_To_JRI_Application extends GenericWrappers
 		headCelValue =getCellNumberByValue(Integer.parseInt(getData("TTITLE_DATA_HEAD_ROW")),getData("TITLE_PASS"));
 		sendKeyByAnyLocatorNumeric(loc.SingInPage_Password_Input,headCelValue,Integer.parseInt(getData("VALID_DATA_ROW")));
 		Thread.sleep(10000);
+		enterTextCaptcha(loc.SingInPage_Captcha_Input);
 		clickByAnylocator(loc.SingInPage_SecureSignIn_Button);
 		
 		Thread.sleep(10000);
@@ -148,6 +150,8 @@ public class TS_002_Loging_And_Logout_To_JRI_Application extends GenericWrappers
 		// System.out.println(getData("PASSWORD_FORGOT_POPUP_EMAIL_SENT_CONFIRMATION_MES"));
 	  System.out.println(message_Confirmation);
 	  System.out.println(noSpaceInStringConvertLowercase(getData(
+		  "PASSWORD_FORGOT_POPUP_EMAIL_SENT_CONFIRMATION_MES")));
+	  Assert.assertEquals(message_Confirmation, noSpaceInStringConvertLowercase(getData(
 		  "PASSWORD_FORGOT_POPUP_EMAIL_SENT_CONFIRMATION_MES")));
 		/*
 		 * Assert.assertTrue(message_Confirmation.equals(

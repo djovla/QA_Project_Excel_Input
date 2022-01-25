@@ -52,6 +52,7 @@ public class JRI_Locators {
 	public final By SingInPage_Email_ErrorMsg = By.id("MessageCaption2");
 	public final By SingInPage_Sing_Out_Link = By.id("jriTop_signOut");
 	public final By SingInPage_Forgot_Password_Link = By.id("forgotpassword");
+	public final By SingInPage_Captcha_Input =By.id("txtCaptcha");
 	
 	//Forgot Password Page
 	public final By ForgotPasswordPage_Popup_Text_Td = By.xpath("//div[3]/div[2]/table/tbody/tr[1]/td");
