@@ -1,35 +1,36 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.Assignment_Project_Excel</groupId>
-  <artifactId>Cucumber_Assignment_Project_Excel</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>PDD_Assignment_Project_Excel</name>
-  <description>Project create Frame work using excel as input</description>
-  
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.Assignment_Project_Excel</groupId>
+	<artifactId>Cucumber_Assignment_Project_Excel</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>PDD_Assignment_Project_Excel</name>
+	<description>Project create Frame work using excel as input</description>
+
+	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
 			<version>4.0.0-alpha-2</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-      
+
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.4.0</version>
-			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
@@ -58,44 +59,42 @@
 			<artifactId>poi-ooxml-schemas</artifactId>
 			<version>4.1.2</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-core</artifactId>
-			<version>6.10.4</version>
+			<version>7.2.3</version>
 		</dependency>
-		
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>6.11.0</version>
-</dependency>
-
-	
-	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java8 -->
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.9</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/tech.grasshopper/cucumber-pdf-report -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>cucumber-pdf-report</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java8</artifactId>
-			<version>7.0.0</version>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.2.3</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
 		<dependency>
 			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-junit</artifactId>
-			<version>6.9.1</version>
-			<scope>test</scope>
+			<artifactId>cucumber-testng</artifactId>
+			<version>7.2.3</version>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
-			<scope>test</scope>
-		</dependency>
-  
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -132,13 +131,13 @@
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
-				
-				 <plugin>
+
+				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-report-plugin</artifactId>
 					<version>3.0.0-M5</version>
-				 </plugin>
-			
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>

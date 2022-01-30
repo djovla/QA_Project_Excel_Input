@@ -4,13 +4,20 @@ import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import com.objectrepository.JRI_Locators;
 import com.utilities.GenericWrappers;
 
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
@@ -26,6 +33,10 @@ public class TS_002_Loging_And_Logout_To_JRI_Application extends GenericWrappers
 		loadExcelFile("./src/test/resources/Properties/JRI_TestCases_Practice.xlsx");
 		inputFromExcelFile(getData("SHEET_LOGIN"));
 
+	}
+	@AfterAll
+	 public static void after_all() {
+		closeCurrentWindow();
 	}
 	
 	@And("Navigate to Sing in page")
@@ -160,5 +171,12 @@ public class TS_002_Loging_And_Logout_To_JRI_Application extends GenericWrappers
 		 */
 		 
 		  }
+	  @AfterStep
+		public void addScreenshot(Scenario scenario){
+
+			//validate if scenario has failed
+			takeFailScreenshots(scenario);
+			
+		}
 	 
 }

@@ -29,7 +29,7 @@
      And Verify the Term error message
      And Check the Refresh feature
      And Verify the Invalid data validation messages 
-    # Then Check user will able to Create an account with valid data
+     Then Check user will able to Create an account with valid data
    
    Scenario: Login and Logout to JRI web Application 
      Given Invoke JRI Home Page

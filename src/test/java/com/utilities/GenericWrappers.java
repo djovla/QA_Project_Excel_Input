@@ -47,6 +47,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 //Here we will store re-usable Functions/Methods
@@ -215,6 +216,12 @@ public class GenericWrappers extends BaseClass {
 		System.out.println("Screenshot taken*** ");
 	}
 
+	public void takeFailScreenshots(Scenario scenario) {
+		if(scenario.isFailed()) {
+			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(screenshot, "image/png", "image"); 
+		}
+	}
 	public void takeScreenshot(ITestResult res) throws Exception {
 
 		projectDir = System.getProperty("user.dir");
@@ -290,8 +297,11 @@ public class GenericWrappers extends BaseClass {
 		return noSpaceInStringConvertLowercase(string);
 	}
 	/************* Close Current Window ***************/
-	public void closeCurrentWindow() {
+	public static void closeCurrentWindow() {
 		driver.close();
+	}
+	public void closeAllWindow() {
+		driver.quit();
 	}
 	/************* Close Current Window ***************/
 	public void refreshCurrentWindow() {

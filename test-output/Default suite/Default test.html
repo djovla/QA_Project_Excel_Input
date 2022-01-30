@@ -9,6 +9,7 @@
 .stack-trace { display: none;} 
 </style>
 <script type="text/javascript">
+<!--
 function flip(e) {
   current = e.style.display;
   if (current == 'block') {
@@ -54,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 07 18:02:59 EST 2022</td>
+<td>Started on:</td><td>Sat Jan 29 22:17:37 EST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (44 ms)</td>
+<tr><td>Total time:</td><td>152 seconds (152216 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -66,18 +67,113 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='stepdefinitions.TS_001_Create_JRI_Account.f()'><b>f</b><br>Test class: stepdefinitions.TS_001_Create_JRI_Account</td>
-<td></td>
-<td>0</td>
-<td>stepdefinitions.TS_001_Create_JRI_Account@2fd66ad3</td></tr>
+<td title='runner.TestRunner.tearDownClass()'><b>tearDownClass</b><br>Test class: runner.TestRunner</td>
+<td><div><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;Josephs-MBP&apos;, ip: &apos;fe80:0:0:0:108a:48db:d3d:5295%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.2&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4f85798b17f138b7bc8c1ad7d1ebb543, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /var/folders/n9/7mrk55ps2qq...}, goog:chromeOptions: {debuggerAddress: localhost:55403}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:55403/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f85798b17f138b7bc8c1ad7d1ebb543
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:428)
+	at com.utilities.GenericWrappers.closeCurrentWindow(GenericWrappers.java:301)
+	at stepdefinitions.TS_001_Create_JRI_Account.after_all(TS_001_Create_JRI_Account.java:45)
+</pre></div><a href='#' onClick='toggleBox("stack-trace813364097", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace813364097'><pre>org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;Josephs-MBP&apos;, ip: &apos;fe80:0:0:0:108a:48db:d3d:5295%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.2&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4f85798b17f138b7bc8c1ad7d1ebb543, close {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: /var/folders/n9/7mrk55ps2qq...}, goog:chromeOptions: {debuggerAddress: localhost:55403}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:55403/devtoo..., se:cdpVersion: 97.0.4692.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f85798b17f138b7bc8c1ad7d1ebb543
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:428)
+	at com.utilities.GenericWrappers.closeCurrentWindow(GenericWrappers.java:301)
+	at stepdefinitions.TS_001_Create_JRI_Account.after_all(TS_001_Create_JRI_Account.java:45)
+</pre></div></td>
+<td>7</td>
+<td>runner.TestRunner@4f51b3e0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create JRI Account", "Optional[TEST Project in JRI Application]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at stepdefinitions.TS_001_Create_JRI_Account.tc_010_Click_Create_Account_With_Valid_Data_To_Create_Account(TS_001_Create_JRI_Account.java:200)
+	at ✽.Check user will able to Create an account with valid data(file:///Users/tvig/workspace/Cucumber_Assignment_Project_Excel/./src/test/resources/Features/scenarios.feature:32)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1657521272", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1657521272'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at stepdefinitions.TS_001_Create_JRI_Account.tc_010_Click_Create_Account_With_Valid_Data_To_Create_Account(TS_001_Create_JRI_Account.java:200)
+	at ✽.Check user will able to Create an account with valid data(file:///Users/tvig/workspace/Cucumber_Assignment_Project_Excel/./src/test/resources/Features/scenarios.feature:32)
+</pre></div></td>
+<td>46</td>
+<td>runner.TestRunner@4f51b3e0</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login and Logout to JRI web Application", "Optional[TEST Project in JRI Application]"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at stepdefinitions.TS_002_Loging_And_Logout_To_JRI_Application.tc_015_Click_Create_Account_With_Valid_Data_To_Create_Account(TS_002_Loging_And_Logout_To_JRI_Application.java:75)
+	at ✽.Verify user will be able to login with valid data(file:///Users/tvig/workspace/Cucumber_Assignment_Project_Excel/./src/test/resources/Features/scenarios.feature:38)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1508333131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1508333131'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at stepdefinitions.TS_002_Loging_And_Logout_To_JRI_Application.tc_015_Click_Create_Account_With_Valid_Data_To_Create_Account(TS_002_Loging_And_Logout_To_JRI_Application.java:75)
+	at ✽.Verify user will be able to login with valid data(file:///Users/tvig/workspace/Cucumber_Assignment_Project_Excel/./src/test/resources/Features/scenarios.feature:38)
+</pre></div></td>
+<td>97</td>
+<td>runner.TestRunner@4f51b3e0</td></tr>
 </table><p>
 </body>
 </html>
